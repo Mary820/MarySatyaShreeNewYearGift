@@ -1,43 +1,20 @@
-Sweet Eclipse
-=============
-
-Sweet Eclipse is a project in which the reliable Eclipse platform meets modern UI techniques to provide better user experience.
-
-![Solarized Theme](http://exyte.github.io/sweet.eclipse/img/app1.png)
-![Dark Theme](http://exyte.github.io/sweet.eclipse/img/app2.png)
-![Idea Darcula Theme](http://exyte.github.io/sweet.eclipse/img/app3.png)
-
-Check out [Sweet Eclipse website](http://exyte.github.io/sweet.eclipse/) for more information.
-
-Build a Package Locally
------------------------
-
-It's *easy* to run the build locally! All you need is Maven and then you need 
-to tell Maven which package(s) to build via profile. Currently we provide
-only java package against Eclipse Mars.1 (4.5.1). You can build it using following 
-command from the root of the Git repository:
-
-    mvn clean verify -Psweet.package.java -Declipse.simultaneous.release.repository="http://download.eclipse.org/releases/mars/201510021000"
-
-This build creates output in two places:
-
-1. tar.gz/zip archives with the packages in `archive/` and
-2. a p2 repository with the EPP artifacts in `archive/repository/`.
-
-Windows users
-------------- 
-
-If you are running the build on Windows, the last build step will currently fail. 
-This failure can be circumvented by skipping the last step which aggregates the 
-filtered EPP artifacts from the packages into a new p2 repository. For further 
-details see [bug 426416](https://bugs.eclipse.org/bugs/show_bug.cgi?id=426416).
-At the moment it is advised to run the build command on Windows with `package` 
-only:
-
-    mvn clean package -Psweet.package.java
-
-In addition to that it is not possible to create zip and tar.gz archives on 
-Windows due to missing Bash scripting capabilities. On Windows, the output of the
-build is the `eclipse` directory that contains the usual content from the zip
-archive. This directory can be found below (e.g. RCP package) 
-`packages/com.exyte.sweet.package.java.product/target/products/`.
+Design an object model for a given domain. Use (demonstrate the ability to work with): 
+- Classes (abstract classes – if possible) 
+- Interfaces 
+- Inheritance, 
+- Polymorphism, 
+- Encapsulation 
+Each class methods and variables must have a sense and be informative. It is good to think about exactly
+what classes are needed in the solution. Inheritance should be used only when it makes sense. Classes
+must be properly laid out in packages. Working with a user’s console menu should be minimal (only
+necessary data input, display only what is asked in the problem). The task is a domain area where you
+have to allocate the necessary hierarchy of classes and to implement it with the features of OOP (using
+inheritance, if necessary or realizing interfaces). Each class must have fields and methods that you
+consider necessary. The program should create objects of different classes in the selected domain,
+combine them in any set of objects (use the collection). As a rule, the task requires to perform some
+action on the objects in a collection of objects based on specified criteria. 
+Tasks : 
+Create the below project using Maven.
+1. New Year&#39;s gift. Identify the hierarchy of chocolates and other sweets. Create multiple objects of
+sweets. Collect children&#39;s gift to define total weight. Sort the chocolates in a gift by one of the options.
+Find candies in the gift corresponding to a predetermined range of options.
